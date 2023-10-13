@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
    return view('welcome');
 });
@@ -35,5 +36,15 @@ Route::get('/form', function () {
 
 Route::view('/', 'welcome')->name('apodoinicio');
 Route::view('/form', 'formulario') ->name('apodoFormulario');
-Route::view('/recuerdos','recuerdos')->name('apodoRecuerdos');
+Route::view('/v1','vista1')->name('apodoVista');
 
+*/
+
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\diarioController;
+
+Route::get('/',  [diarioController::class,'metodoinicio'])->name('apodoInicio');
+
+Route::get('form',  [diarioController::class,'metodoFormulario'])->name('apodoFormulario');
+Route::get('loquequieroolvidar',  [diarioController::class,'metodoRecuerdos'])->name('apodorecuerdos');

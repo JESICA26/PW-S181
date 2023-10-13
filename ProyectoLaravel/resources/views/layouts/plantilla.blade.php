@@ -8,6 +8,7 @@
 </head>
 <body>
     @include('partials.navb')
+    @endcomponent
     @yield('contenido')
 </body>
 </html>
