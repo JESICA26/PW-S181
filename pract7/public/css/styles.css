@@ -1,0 +1,26 @@
+body {
+   
+    background-color: rgb(150, 111, 86);
+    color: white;
+}
+
+.logo{
+
+    margin: 0%;
+    padding:auto;
+    width: 250px;
+    height:200px;
+    
+
+}
+nav{
+    height: 120px;
+}
+footer{
+    bottom:0;
+    width:100%;
+    background-color: rgb(255, 235, 205); 
+    color: black;
+    padding:10px 0;
+
+}

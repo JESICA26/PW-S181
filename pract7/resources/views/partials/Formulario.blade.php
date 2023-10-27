@@ -2,7 +2,7 @@
 @section('titulo','form')
 @section('contenido')
 
-  <h1 class="display-1 text-center text-primary">FORMULARIO</h1>
+  <h1 class="display-1 text-center text-primary">Formulario</h1>
   <div class="container mt-5 col-md-6">
     @if(session()->has('confirmacion'))
 
@@ -25,10 +25,10 @@
 
     <div class="card ">
       <div class="card-header fs-4 fw-medium text-primary text-center">
-        Introduce aquí tus memorias:
+        Registra aqui tu libro:
       </div>
       <div class="card-body">
-        <form method="POST" action="/guardarRe">
+        <form method="POST" action="/guardarLibro">
 
         @csrf
           <div class="mb-3">
@@ -37,15 +37,33 @@
             <p class="text-danger fst-italic fw-semibold">{{$errors->first('txtTitulo')}} </p>
 
           </div>
+
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Recuerdo:</label>
-            <input type="text" name="txtRecuerdo"class="form-control" value="{{old('txtRecuerdo')}}"  id="exampleInputPassword1">
-            {{$errors->first('txtRecuerdo')}}
+            <label for="exampleInputEmail1" class="form-label">Autor:</label>
+            <input type="text" name="txtAutor"class="form-control" value="{{old('txtAutor')}}" >
+            <p class="text-danger fst-italic fw-semibold">{{$errors->first('txtAutor')}} </p>
+
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Paginas:</label>
+            <input type="text" name="txtPaginas"class="form-control" value="{{old('txtPaginas')}}" >
+            <p class="text-danger fst-italic fw-semibold">{{$errors->first('txtPaginas')}} </p>
+
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Editorial:</label>
+            <input type="text" name="txtEditorial"class="form-control" value="{{old('txtEditorial')}}" >
+            <p class="text-danger fst-italic fw-semibold">{{$errors->first('txtEditorial')}} </p>
+
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email de Biblioteca:</label>
+            <input type="text" name="txtEmail"class="form-control" value="{{old('txtEmail')}}">
+            <p class="text-danger fst-italic fw-semibold">{{$errors->first('txtEmail')}} </p>
             ..
-
-
-            
-
           </div>
 
 
